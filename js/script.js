@@ -5,22 +5,25 @@ var app = new Vue (
             list:[
                 {
                     name: "Cucinare",
-                    value: false
+                    completed: false
                 },
                 {
                     name: "Palestra",
-                    value: false
+                    completed: false
                 },
                 {
                     name: "Lavorare",
-                    value: false
+                    completed: true
                 },
                 {
                     name: "Fare la spesa",
-                    value: false
+                    completed: false
                 }
             ],
-            newActivity:" x"
+            newActivity:" ",
+
+
+
         },
         methods:{
             close: function(index){
@@ -36,16 +39,27 @@ var app = new Vue (
                 this.list.push(
                     {
                         name:this.newActivity,
-                        value: false
+                        completed: false
 
                     }
 
                 )
+            },
+            complete:function(index) {
+                console.log(this.list[index].completed);
+                if(this.list[index].completed == false) {
+                    this.list[index].completed = true;
+                }else{
+                    this.list[index].completed = false;
+                }
+                console.log(this.list);
             }
 
-        }
+        },
     }
 )
+
+
 
 // var ciao=[0,1];
 // for(var i=0; i > ciao.length) console.log(list);

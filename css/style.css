@@ -29,3 +29,12 @@ li {
     cursor: pointer;
     margin-right: 10px;
 }
+
+.red{
+    color: chartreuse;
+}
+
+.blue {
+    color: darkblue;
+}
+
