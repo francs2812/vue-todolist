@@ -19,7 +19,8 @@ var app = new Vue (
                     name: "Fare la spesa",
                     value: false
                 }
-            ]
+            ],
+            newActivity:" x"
         },
         methods:{
             close: function(index){
@@ -30,7 +31,21 @@ var app = new Vue (
                     this.list.splice(index,1);
                 }
             
+            },
+            add: function(){
+                this.list.push(
+                    {
+                        name:this.newActivity,
+                        value: false
+
+                    }
+
+                )
             }
+
         }
     }
 )
+
+// var ciao=[0,1];
+// for(var i=0; i > ciao.length) console.log(list);

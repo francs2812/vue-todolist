@@ -14,17 +14,17 @@
     <div id="root">
         <div id="container">
             <section id="add_list">
-                <input type="text" placeholder="aggiungi">
-                <i class="fas fa-plus"></i>
+                <input v-model="newActivity" type="text" placeholder="aggiungi">
+                <i @click="add" class="fas fa-plus"></i>
             </section>
     
             <section id="list">
-                <ul>
+                <ul v-if="list.length > 0">
                     <li v-for="(val1, Index) in list">
                     <i class="far fa-times-circle" @click="close(val1.name)"></i> {{val1.name}}
                     </li>
                 </ul>
-                
+                <h1 v-else> Lista completata !</h1>
             </section>
             
         </div>
