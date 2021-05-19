@@ -13,7 +13,7 @@ var app = new Vue (
                 },
                 {
                     name: "Lavorare",
-                    completed: true
+                    completed: false
                 },
                 {
                     name: "Fare la spesa",

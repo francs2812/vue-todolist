@@ -12,17 +12,20 @@
 </head>
 <body>
     <div id="root">
+        <h1 style="text-align: center;font-size: 50px; color:brown">TO DO LIST</h1>
         <div id="container">
+            <h1>Aggiungi alla lista:</h1>
             <section id="add_list">
-                <input v-model="newActivity" type="text" placeholder="aggiungi" @keydown.enter="add">
+                <input v-model="newActivity" type="text"  @keydown.enter="add">
                 <i @click="add" class="fas fa-plus"></i>
             </section>
     
             <section id="list">
+                <h1>Lista :</h1>
                 <ul v-if="list.length > 0">
                     <li 
                     v-for="(val1, Index) in list"
-                    :class="(list[Index].completed)? 'red' : '' "
+                    :class="(list[Index].completed)? 'done' : '' "
                     @click="complete(Index)"
                       >
                       
