@@ -1,0 +1,31 @@
+#container {
+    width: 250px;
+    height: 80vh;
+    padding: 30px;
+    border-radius: 50px;
+    margin: auto;
+    background-color: beige;
+}
+
+#add_list {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-plus {
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+li {
+    font-size: 20px;
+    display: flex;
+    cursor: pointer;
+}
+
+.fa-times-circle {
+    cursor: pointer;
+    margin-right: 10px;
+}
